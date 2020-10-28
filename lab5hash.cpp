@@ -3,17 +3,17 @@ using namespace std;
 // hash functions//////////////////////////////////////////////////////////////////////////////////////////////////
 int HashFunctionMultiplication(int k)
 {
-	int N = 8; double A = 0.618033;
+	int N = 33; double A = 0.618033;
 	int h = floor(N * fmod(k * A, 1));
 	return h;
 }
 int HashFunctionDivision(int k)
 {
-	return (k % 13);
+	return (k % 33);
 }
 int HashFunctionRowKeys(const char* ch)
 {
-	int a = 26; int M = 13;
+	int a = 29; int M = 33;
 	int result = 0;
 	int size = sizeof(ch);
 	for (int i = 0; i < size; i++) {
